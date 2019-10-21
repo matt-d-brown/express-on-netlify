@@ -2,16 +2,20 @@
   "name": "express-on-netlify",
   "version": "0.0.0",
   "private": true,
+  "main": "functions/server.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "build": "netlify-lambda build express",
+    "start": "nodemon server-local.js"
   },
   "dependencies": {
+    "body-parser": "1.19.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "hbs": "~4.0.1",
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0",
-    "node-sass-middleware": "0.11.0"
+    "node-sass-middleware": "0.11.0",
+    "serverless-http": "2.3.0"
   }
 }
